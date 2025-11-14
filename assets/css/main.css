@@ -4740,3 +4740,29 @@ input, select, textarea {
     color: #999;
     font-weight: 300;
 }
+
+/* Contact Section Alignment */
+.contact section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact h3 {
+    margin: 0;
+}
+
+.contact p {
+    margin: 0;
+}
+
+.contact .separator {
+    color: #999;
+    font-weight: 300;
+    margin: 0 5px;
+}
+
+.contact .icons {
+    margin: 0;
+    padding: 0;
+}

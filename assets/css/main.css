@@ -4702,3 +4702,41 @@ input, select, textarea {
 .contact p {
     margin: 0;
 }
+
+/* ========================================
+   Social & Contact Alignment Fixes
+   ======================================== */
+
+/* Social Section */
+.social {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.social span,
+.social a {
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Contact Section */
+.contact section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact h3 {
+    margin: 0;
+}
+
+.contact p {
+    margin: 0;
+}
+
+/* Separator Styling */
+.separator {
+    color: #999;
+    font-weight: 300;
+}

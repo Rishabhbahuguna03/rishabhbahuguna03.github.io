@@ -1,0 +1,1 @@
+- SQL Murder Mystery_Portfolio_cover is renamed due to long character strength. [This](https://www.freepik.com/free-photo/truth-concept-composition-detective-desk_16691262.htm) is the original image. Source: [Freepik](https://www.freepik.com/)

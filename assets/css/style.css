@@ -506,9 +506,16 @@ nav {
 }
 .contact-inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 3fr 2fr;
   gap: 3rem;
-  align-items: start;
+  align-items: center;
+}
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 0;
+  align-items: flex-start;
 }
 .contact-title {
   font-family: var(--serif);
@@ -522,60 +529,58 @@ nav {
   line-height: 1.8;
   margin-bottom: 1.5rem;
 }
-.contact-email {
-  font-family: var(--serif);
-  font-size: 1.1rem;
-  color: var(--accent2);
-  text-decoration: none;
-  border-bottom: 1px solid currentColor;
-  transition: color .2s;
-}
-.contact-email:hover { color: var(--accent); }
 .contact-right {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
   padding-top: 0.5rem;
 }
-.contact-link {
-  display: flex;
+.contact-pill {
+  display: inline-flex;
   align-items: center;
-  gap: 12px;
-  font-size: 0.88rem;
-  color: var(--ink2);
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 500;
   text-decoration: none;
-  padding: 12px 16px;
   border: 1px solid var(--border);
-  border-radius: var(--radius);
   background: white;
   transition: all .2s;
+  width: fit-content;
 }
-.contact-link:hover {
-  border-color: var(--ink2);
-  color: var(--ink);
-}
-.contact-link-icon {
-  width: 32px;
-  height: 32px;
-  border-radius: var(--radius);
-  background: var(--paper2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.82rem;
-  font-weight: 500;
-  color: var(--ink);
-  flex-shrink: 0;
-}
-.contact-link-label {
-  font-weight: 500;
-  color: var(--ink);
-  font-size: 0.85rem;
-  display: block;
-}
-.contact-link-sub {
-  font-size: 0.75rem;
+.contact-pill svg { flex-shrink: 0; }
+.contact-pill .pill-slash {
   color: var(--ink3);
+  font-weight: 300;
+}
+.contact-pill .pill-username {
+  color: var(--ink2);
+  font-size: 0.82rem;
+}
+.contact-pill:hover .pill-username { color: var(--ink); }
+
+/* LinkedIn — #0a66c2 */
+.contact-pill.linkedin { color: #0a66c2; border-color: rgba(10,102,194,0.2); }
+.contact-pill.linkedin:hover { background: #0a66c2; border-color: #0a66c2; }
+.contact-pill.linkedin:hover .pill-slash,
+.contact-pill.linkedin:hover .pill-username { color: #ffffff; }
+
+/* GitHub — #24292f */
+.contact-pill.github { color: #24292f; border-color: rgba(36,41,47,0.2); }
+.contact-pill.github:hover { background: #24292f; border-color: #24292f; }
+.contact-pill.github:hover .pill-slash,
+.contact-pill.github:hover .pill-username { color: #ffffff; }
+
+/* Email — Gmail red #EA4335 */
+.contact-pill.email { color: #EA4335; border-color: rgba(234,67,53,0.2); }
+.contact-pill.email:hover { background: #EA4335; border-color: #EA4335; }
+.contact-pill.email:hover .pill-slash,
+.contact-pill.email:hover .pill-username { color: #ffffff; }
+
+/* Responsive */
+@media (max-width: 680px) {
+  .contact-pill { width: 100%; }
 }
 
 /* ── Footer ─────────────────────────────────────────────────── */

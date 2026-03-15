@@ -12,6 +12,7 @@
   --paper2:   #eeece6;
   --accent:   #c84b2f;
   --accent2:  #1d5c8a;
+  --brand:    #00a1e1;
   --border:   rgba(26, 26, 24, 0.10);
   --serif:    'DM Serif Display', Georgia, serif;
   --sans:     'DM Sans', system-ui, sans-serif;
@@ -309,6 +310,13 @@ nav {
 .about-body p { margin-bottom: 1rem; }
 .about-body p:last-child { margin-bottom: 0; }
 .about-body strong { color: var(--ink); font-weight: 500; }
+.about-body a {
+  color: var(--brand);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity .2s, color .2s;
+}
+.about-body a:hover { opacity: 0.75; }
 .sidebar-block { margin-bottom: 1.5rem; }
 .sidebar-label {
   font-size: 0.72rem;

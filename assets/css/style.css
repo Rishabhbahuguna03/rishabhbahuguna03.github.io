@@ -232,13 +232,16 @@ nav {
   font-weight: 500;
   padding: 10px 24px;
   background: transparent;
-  color: var(--ink);
-  border: 1px solid var(--border);
+  color: #0a66c2;
+  border: 1px solid #0a66c2;
   border-radius: var(--radius);
   text-decoration: none;
   transition: all .2s;
 }
-.btn-outline:hover { border-color: var(--ink); }
+.btn-outline:hover {
+  background: #0a66c2;
+  color: #ffffff;
+}
 
 /* Hero visual card */
 .hero-visual {

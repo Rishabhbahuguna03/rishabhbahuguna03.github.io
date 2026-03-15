@@ -15,7 +15,7 @@
   --brand:    #00a1e1;
   --border:   rgba(26, 26, 24, 0.10);
   --serif:    'DM Serif Display', Georgia, serif;
-  --sans:     'DM Sans', system-ui, sans-serif;
+  --sans:     'Jost', 'Century Gothic', system-ui, sans-serif;
   --max:      860px;
   --radius:   4px;
 }

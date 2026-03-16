@@ -10,7 +10,7 @@
   --ink3:     #888880;
   --paper:    #f7f5f0;
   --paper2:   #eeece6;
-  --accent:   #c84b2f;
+  --accent:   #E14000;
   --accent2:  #1d5c8a;
   --brand:    #00a1e1;
   --border:   rgba(26, 26, 24, 0.10);
@@ -297,7 +297,7 @@ nav {
 #about {
   max-width: var(--max);
   margin: 0 auto;
-  padding: 4rem 2rem;
+  padding: 4rem 2rem 5rem;
 }
 .about-grid {
   display: grid;
@@ -309,6 +309,7 @@ nav {
   font-size: 0.97rem;
   color: var(--ink2);
   line-height: 1.85;
+  max-width: 520px;
 }
 .about-body p { margin-bottom: 1rem; }
 .about-body p:last-child { margin-bottom: 0; }
@@ -510,13 +511,6 @@ nav {
   gap: 3rem;
   align-items: center;
 }
-.contact-right {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding-top: 0;
-  align-items: flex-start;
-}
 .contact-title {
   font-family: var(--serif);
   font-size: 1.8rem;
@@ -527,13 +521,14 @@ nav {
   font-size: 0.93rem;
   color: var(--ink2);
   line-height: 1.8;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 .contact-right {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding-top: 0.5rem;
+  padding-top: 0;
+  align-items: flex-start;
 }
 .contact-pill {
   display: inline-flex;
@@ -577,11 +572,6 @@ nav {
 .contact-pill.email:hover { background: #EA4335; border-color: #EA4335; }
 .contact-pill.email:hover .pill-slash,
 .contact-pill.email:hover .pill-username { color: #ffffff; }
-
-/* Responsive */
-@media (max-width: 680px) {
-  .contact-pill { width: 100%; }
-}
 
 /* ── Footer ─────────────────────────────────────────────────── */
 footer {
@@ -631,6 +621,7 @@ footer {
   .project-card { grid-template-columns: 1fr; }
   .project-img  { min-height: 80px; }
   .contact-inner { grid-template-columns: 1fr; }
+  .contact-pill { width: 100%; }
   .nav-links  { display: none; }
   .nav-cta    { display: none; }
   .nav-hamburger { display: flex; }

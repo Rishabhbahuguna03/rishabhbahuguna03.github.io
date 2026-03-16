@@ -14,6 +14,171 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- About section scoped styles -->
+  <style>
+    /* ── About narrative ─────────────────────────────────── */
+    .about-headline {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: clamp(26px, 4vw, 36px);
+      font-weight: 400;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      margin: 0 0 2rem;
+      color: var(--color-heading, #0f0f0f);
+    }
+    .about-headline em {
+      font-style: italic;
+    }
+
+    .about-body p {
+      font-size: 15.5px;
+      line-height: 1.9;
+      margin-bottom: 1.25rem;
+      color: var(--color-text, #3a3a3a);
+      font-weight: 300;
+    }
+    .about-body p:last-child { margin-bottom: 0; }
+
+    .about-pull {
+      border-left: 2.5px solid #c9501a;
+      padding: 6px 0 6px 22px;
+      margin: 1.75rem 0;
+      background: rgba(201,80,26,0.04);
+      border-radius: 0 4px 4px 0;
+    }
+    .about-pull p {
+      font-size: 15.5px;
+      line-height: 1.9;
+      color: var(--color-text, #3a3a3a);
+      font-weight: 300;
+      margin: 0;
+    }
+
+    /* ── Stories divider ─────────────────────────────────── */
+    .stories-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #c9501a;
+      margin: 3rem 0 0.4rem;
+    }
+    .stories-sub {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-style: italic;
+      font-size: 13px;
+      color: #999;
+      margin: 0 0 2.5rem;
+    }
+
+    /* ── Individual story card ───────────────────────────── */
+    .story-card {
+      padding-bottom: 2.5rem;
+      margin-bottom: 2.5rem;
+      border-bottom: 0.5px solid rgba(0,0,0,0.1);
+    }
+    .story-card:last-of-type {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    .story-card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+    .story-tag {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #7a746e;
+      background: rgba(0,0,0,0.04);
+      border: 0.5px solid rgba(0,0,0,0.1);
+      padding: 4px 10px;
+      border-radius: 3px;
+      white-space: nowrap;
+    }
+    .story-subtitle {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-style: italic;
+      font-size: 13px;
+      color: #aaa;
+    }
+
+    .story-card p {
+      font-size: 15px;
+      line-height: 1.9;
+      color: var(--color-text, #3a3a3a);
+      font-weight: 300;
+      margin-bottom: 1rem;
+    }
+    .story-card p:last-of-type { margin-bottom: 0.5rem; }
+
+    .story-source {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-style: italic;
+      font-size: 11px;
+      color: #bbb;
+      padding-left: 12px;
+      border-left: 1px solid rgba(0,0,0,0.12);
+      margin-top: 0.75rem;
+      display: block;
+    }
+
+    /* ── About footer strip ──────────────────────────────── */
+    .about-footer-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 3rem 0 2rem;
+    }
+    @media (max-width: 560px) {
+      .about-footer-strip { grid-template-columns: 1fr; }
+    }
+    .about-footer-cell {
+      padding: 14px 16px;
+      background: rgba(0,0,0,0.03);
+      border: 0.5px solid rgba(0,0,0,0.09);
+      border-radius: 4px;
+    }
+    .about-footer-cell .afc-label {
+      font-size: 8.5px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #bbb;
+      margin-bottom: 5px;
+    }
+    .about-footer-cell .afc-value {
+      font-size: 12.5px;
+      font-weight: 500;
+      color: var(--color-heading, #0f0f0f);
+      line-height: 1.5;
+    }
+
+    /* ── Closing quote ───────────────────────────────────── */
+    .about-closing-quote {
+      border-top: 1px solid #c9501a;
+      border-bottom: 0.5px solid rgba(0,0,0,0.08);
+      background: rgba(201,80,26,0.03);
+      padding: 24px 32px;
+      text-align: center;
+      border-radius: 0 0 4px 4px;
+    }
+    .about-closing-quote p {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-style: italic;
+      font-size: 14.5px;
+      color: #888;
+      line-height: 1.7;
+      margin: 0;
+    }
+  </style>
 </head>
 <body>
 
@@ -78,28 +243,127 @@
 
 <hr class="divider" />
 
-<!-- ABOUT — no grid, no sidebar, full width -->
+<!-- ABOUT -->
 <section id="about">
   <div class="section-header reveal">
     <div class="section-num">01 · About</div>
     <h2 class="section-title">The story behind the analyst</h2>
   </div>
+
   <div class="about-body reveal">
+
+    <!-- Opening headline -->
+    <h3 class="about-headline">
+      I don't start with answers.<br>
+      I start with the question <em>behind</em> the metric.
+    </h3>
+
+    <!-- About narrative -->
     <p>
-      I am a fresher targeting <strong>Product Analyst, Associate PM, Business Analyst, and Data Analyst roles</strong> — with a focus on understanding the data and reasoning behind product decisions, not just the decisions themselves.
+      I open Duolingo every morning. Not just to learn — but because it is one of the most ruthlessly instrumented products alive. Every notification is a tested hypothesis. Every streak is a loss-aversion loop backed by a retention model. According to Duolingo's Q4 FY2024 shareholder letter, the company's DAU/MAU ratio rose to <strong>34.7%</strong> — meaning roughly one in three monthly users showed up daily. That number didn't just impress me. It made me ask: <em>what user state model makes that compounding possible, and what did they quietly give up to get there?</em>
     </p>
+
+    <div class="about-pull">
+      <p>
+        The answer arrived when Duolingo cut approximately 10% of its contractor workforce in early 2024 — translators replaced by AI — while DAU kept climbing. Most people read that as a labour story. I read it as a <strong>product strategy question</strong>: if engagement metrics stay healthy while a product's core learning outcomes quietly erode, does the dashboard lie? That is not rhetorical. That is the kind of tension a product analyst has to name clearly, before anyone else does.
+      </p>
+    </div>
+
     <p>
-      My interest in product analytics started when I noticed that
+      That habit of looking past the metric started even earlier — when
       <a href="https://www.business-standard.com/technology/tech-news/whatsapp-pay-what-is-it-how-to-enable-it-competitors-in-india-and-more-125010100440_1.html"
          target="_blank" rel="noopener">WhatsApp Pay</a>
-      was being pushed into an already-crowded UPI market. My first instinct wasn't "cool feature" — it was <strong>"what problem does this actually solve, and for whom?"</strong> That question led me to funnel thinking, retention metrics, user behaviour data, and the frameworks product teams use to justify — or sometimes obscure — their decisions.
+      entered a UPI market that already had PhonePe, GPay, and Paytm. My instinct wasn't "interesting feature." It was: <em>which user segment does this actually serve, and does the retention data support that this problem needed another solution?</em> Funnel thinking, cohort behaviour, the gap between what users do and what they say they do — that is where real analysis begins.
     </p>
+
     <p>
-      My toolkit covers <strong>SQL, Python, Excel, and Tableau</strong>. But what I practise daily is the question behind the query: why did a metric move, which user segment is the story really about, and what one change would the data actually support?
+      I work with <strong>SQL, Python, Excel, and Tableau</strong>. But the tool is never the answer. The answer is the question you bring to the data — and the intellectual honesty to follow it even when it complicates the story someone wants to tell.
     </p>
-    <p>
-      I work on real-data projects, practise case studies on Unstop, and am building a portfolio that shows product thinking alongside technical skill. Available within 15 days — open to roles across India.
-    </p>
+
+    <!-- Stories section -->
+    <p class="stories-label">The moments that shaped the thinking</p>
+    <p class="stories-sub">Four observations. Four product questions. One consistent instinct.</p>
+
+    <!-- Story 01 · Spotify -->
+    <div class="story-card">
+      <div class="story-card-header">
+        <span class="story-tag">01 · Spotify</span>
+        <span class="story-subtitle">The blue dot that asked a bigger question</span>
+      </div>
+      <p>
+        I was scrolling the podcast section when I noticed a small blue dot on an episode I hadn't opened. I knew what it meant — Spotify had tracked that I'd listened to earlier episodes, flagged this one, and placed that dot precisely to catch my eye at the right scroll depth. I didn't just think <em>"useful feature."</em> I thought: <strong>what signal tells the system I am a returning listener worth re-engaging, versus a first-time visitor worth onboarding differently?</strong>
+      </p>
+      <p>
+        That question pulled me into how Spotify's recommendation engine actually works. According to USC's Viterbi School of Engineering, Spotify's system combines three interlocking layers: collaborative filtering that maps relationships across users who share listening habits, NLP models that scan lyrics, blogs, and social media to extract mood and cultural context, and audio analysis that classifies songs by sonic attributes like tempo, energy, and danceability. Discover Weekly drops every Monday because listening intent peaks then. Release Radar lands Friday because new music does. The timing is not aesthetic — it is a retention hypothesis. Every skip, every save, every lingered-on artist page is implicit feedback reshaping what surfaces next. That blue dot wasn't a design choice. It was a product decision backed by a user behaviour model. That is the level I want to operate at.
+      </p>
+      <span class="story-source">Source: USC Viterbi School of Engineering — "Algorithmic Symphonies: How Spotify Strikes the Right Chord"</span>
+    </div>
+
+    <!-- Story 02 · Duolingo retention -->
+    <div class="story-card">
+      <div class="story-card-header">
+        <span class="story-tag">02 · Duolingo</span>
+        <span class="story-subtitle">When a metric looks healthy but the product is eroding</span>
+      </div>
+      <p>
+        The streak never moved me as much as the Friend Quest did. The moment a friend's progress appeared next to mine, I opened the app not out of habit — but out of genuine accountability. That is a different user state entirely. And it made me wonder: <strong>how many of Duolingo's daily actives are showing up to learn, and how many are showing up so they don't lose?</strong>
+      </p>
+      <p>
+        Jackson Shuttleworth, Duolingo's Group PM for Retention, confirmed in a public interview that the team ran over 600 experiments on the streak feature alone — testing notification copy, icon design, XP mechanics, and lesson thresholds. By 2022, most DAUs were maintaining active streaks. But the team recognised the crack: people were no longer logging in to learn — they were logging in so they didn't lose. Meaningless sessions. Hollow engagement. Metrics looked healthy; the product experience was quietly eroding. Duolingo's response was Duolingo Max — a GPT-4 powered tier designed to replace external pressure with genuine learning motivation. That is a product team catching its own metric trap before churn arrived. That kind of analytical self-honesty is precisely what I am training myself to practise.
+      </p>
+      <span class="story-source">Source: Lenny's Podcast — "Behind the product: Duolingo streaks" with Jackson Shuttleworth, Group PM, Retention Team</span>
+    </div>
+
+    <!-- Story 03 · Duolingo freemium -->
+    <div class="story-card">
+      <div class="story-card-header">
+        <span class="story-tag">03 · Duolingo</span>
+        <span class="story-subtitle">The freemium ceiling and what it actually costs</span>
+      </div>
+      <p>
+        The feature I most want on Duolingo — live AI conversation practice — sits behind the Max paywall. I am on the free tier. When I hit that wall, I didn't feel frustrated. I felt curious about the <strong>conversion architecture</strong>: at exactly what point in the learning journey does free-tier value become compelling enough that a user upgrades — rather than quietly exits to a competitor?
+      </p>
+      <p>
+        Duolingo's Q3 FY2024 SEC filing shows 113.1 million MAUs against 8.6 million paid subscribers — a paid penetration of just 8.5%. That means over 91% of the product's daily engagement runs entirely on free-tier psychology: streak mechanics, peer accountability, gamified XP, and the Streak Freeze I've personally used when life interrupted my learning path. Every one of these micro-decisions carries a simultaneous revenue implication and a churn implication. As a free user living inside that calculation every day, I get product education no classroom can replicate.
+      </p>
+      <span class="story-source">Source: Duolingo Q3 FY2024 Shareholder Letter — SEC Filing (NASDAQ: DUOL)</span>
+    </div>
+
+    <!-- Story 04 · The direction -->
+    <div class="story-card">
+      <div class="story-card-header">
+        <span class="story-tag">04 · The direction</span>
+        <span class="story-subtitle">Why BA is the right starting point, not a fallback</span>
+      </div>
+      <p>
+        I am targeting Business Analyst roles alongside Product and Data Analyst positions — and I want to be precise about why that is not hedging. The BA role sits exactly at the intersection I care about most: user behaviour, data interpretation, business system design, and the gap between what a process produces and what a user actually needs. That gap is precisely where product thinking begins.
+      </p>
+      <p>
+        The 3 to 5 year direction is product leadership — the ability to sit in a room where a metric is declining, ask the question nobody else asked, and build the case that moves the team. I am not waiting to develop that capacity on the job. I am practising it now — in every product I open, every business headline I interrogate, every case study I dissect. The analytical layer — SQL, Python, Tableau, business acumen — is the foundation. Product leadership is what gets built on top of it, deliberately and without shortcuts. This portfolio is the first exhibit of that proof.
+      </p>
+    </div>
+
+    <!-- Footer strip -->
+    <div class="about-footer-strip">
+      <div class="about-footer-cell">
+        <div class="afc-label">Targeting</div>
+        <div class="afc-value">Product Analyst · Associate PM · BA · DA</div>
+      </div>
+      <div class="about-footer-cell">
+        <div class="afc-label">Toolkit</div>
+        <div class="afc-value">SQL · Python · Excel · Tableau</div>
+      </div>
+      <div class="about-footer-cell">
+        <div class="afc-label">Available</div>
+        <div class="afc-value">Within 15 days · Pan-India</div>
+      </div>
+    </div>
+
+    <!-- Closing quote -->
+    <div class="about-closing-quote">
+      <p>"Analytics shouldn't build a product alone — but they should make every product decision harder to make badly."</p>
+    </div>
+
   </div>
 </section>
 

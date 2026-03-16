@@ -309,7 +309,6 @@ nav {
   font-size: 0.97rem;
   color: var(--ink2);
   line-height: 1.85;
-  max-width: 520px;
 }
 .about-body p { margin-bottom: 1rem; }
 .about-body p:last-child { margin-bottom: 0; }

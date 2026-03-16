@@ -14,171 +14,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
-
-  <!-- About section scoped styles -->
-  <style>
-    /* ── About narrative ─────────────────────────────────── */
-    .about-headline {
-      font-family: 'DM Serif Display', Georgia, serif;
-      font-size: clamp(26px, 4vw, 36px);
-      font-weight: 400;
-      line-height: 1.25;
-      letter-spacing: -0.02em;
-      margin: 0 0 2rem;
-      color: var(--color-heading, #0f0f0f);
-    }
-    .about-headline em {
-      font-style: italic;
-    }
-
-    .about-body p {
-      font-size: 15.5px;
-      line-height: 1.9;
-      margin-bottom: 1.25rem;
-      color: var(--color-text, #3a3a3a);
-      font-weight: 300;
-    }
-    .about-body p:last-child { margin-bottom: 0; }
-
-    .about-pull {
-      border-left: 2.5px solid #c9501a;
-      padding: 6px 0 6px 22px;
-      margin: 1.75rem 0;
-      background: rgba(201,80,26,0.04);
-      border-radius: 0 4px 4px 0;
-    }
-    .about-pull p {
-      font-size: 15.5px;
-      line-height: 1.9;
-      color: var(--color-text, #3a3a3a);
-      font-weight: 300;
-      margin: 0;
-    }
-
-    /* ── Stories divider ─────────────────────────────────── */
-    .stories-label {
-      font-size: 10px;
-      font-weight: 500;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: #c9501a;
-      margin: 3rem 0 0.4rem;
-    }
-    .stories-sub {
-      font-family: 'DM Serif Display', Georgia, serif;
-      font-style: italic;
-      font-size: 13px;
-      color: #999;
-      margin: 0 0 2.5rem;
-    }
-
-    /* ── Individual story card ───────────────────────────── */
-    .story-card {
-      padding-bottom: 2.5rem;
-      margin-bottom: 2.5rem;
-      border-bottom: 0.5px solid rgba(0,0,0,0.1);
-    }
-    .story-card:last-of-type {
-      border-bottom: none;
-      padding-bottom: 0;
-      margin-bottom: 0;
-    }
-
-    .story-card-header {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 1rem;
-      flex-wrap: wrap;
-    }
-    .story-tag {
-      font-size: 9px;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: #7a746e;
-      background: rgba(0,0,0,0.04);
-      border: 0.5px solid rgba(0,0,0,0.1);
-      padding: 4px 10px;
-      border-radius: 3px;
-      white-space: nowrap;
-    }
-    .story-subtitle {
-      font-family: 'DM Serif Display', Georgia, serif;
-      font-style: italic;
-      font-size: 13px;
-      color: #aaa;
-    }
-
-    .story-card p {
-      font-size: 15px;
-      line-height: 1.9;
-      color: var(--color-text, #3a3a3a);
-      font-weight: 300;
-      margin-bottom: 1rem;
-    }
-    .story-card p:last-of-type { margin-bottom: 0.5rem; }
-
-    .story-source {
-      font-family: 'DM Serif Display', Georgia, serif;
-      font-style: italic;
-      font-size: 11px;
-      color: #bbb;
-      padding-left: 12px;
-      border-left: 1px solid rgba(0,0,0,0.12);
-      margin-top: 0.75rem;
-      display: block;
-    }
-
-    /* ── About footer strip ──────────────────────────────── */
-    .about-footer-strip {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin: 3rem 0 2rem;
-    }
-    @media (max-width: 560px) {
-      .about-footer-strip { grid-template-columns: 1fr; }
-    }
-    .about-footer-cell {
-      padding: 14px 16px;
-      background: rgba(0,0,0,0.03);
-      border: 0.5px solid rgba(0,0,0,0.09);
-      border-radius: 4px;
-    }
-    .about-footer-cell .afc-label {
-      font-size: 8.5px;
-      font-weight: 500;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: #bbb;
-      margin-bottom: 5px;
-    }
-    .about-footer-cell .afc-value {
-      font-size: 12.5px;
-      font-weight: 500;
-      color: var(--color-heading, #0f0f0f);
-      line-height: 1.5;
-    }
-
-    /* ── Closing quote ───────────────────────────────────── */
-    .about-closing-quote {
-      border-top: 1px solid #c9501a;
-      border-bottom: 0.5px solid rgba(0,0,0,0.08);
-      background: rgba(201,80,26,0.03);
-      padding: 24px 32px;
-      text-align: center;
-      border-radius: 0 0 4px 4px;
-    }
-    .about-closing-quote p {
-      font-family: 'DM Serif Display', Georgia, serif;
-      font-style: italic;
-      font-size: 14.5px;
-      color: #888;
-      line-height: 1.7;
-      margin: 0;
-    }
-  </style>
 </head>
 <body>
 
@@ -277,7 +112,7 @@
     </p>
 
     <p>
-      I work with <strong>SQL, Excel, Tableau, Python</strong>. But the tool is never the answer. The answer is the question you bring to the data — and the intellectual honesty to follow it even when it complicates the story someone wants to tell.
+      I work with <strong>SQL, Python, Excel, and Tableau</strong>. But the tool is never the answer. The answer is the question you bring to the data — and the intellectual honesty to follow it even when it complicates the story someone wants to tell.
     </p>
 
     <!-- Stories section -->
@@ -341,22 +176,6 @@
       <p>
         The 3 to 5 year direction is product leadership — the ability to sit in a room where a metric is declining, ask the question nobody else asked, and build the case that moves the team. I am not waiting to develop that capacity on the job. I am practising it now — in every product I open, every business headline I interrogate, every case study I dissect. The analytical layer — SQL, Python, Tableau, business acumen — is the foundation. Product leadership is what gets built on top of it, deliberately and without shortcuts. This portfolio is the first exhibit of that proof.
       </p>
-    </div>
-
-    <!-- Footer strip -->
-    <div class="about-footer-strip">
-      <div class="about-footer-cell">
-        <div class="afc-label">Targeting</div>
-        <div class="afc-value">Product Analyst · Associate PM · BA · DA</div>
-      </div>
-      <div class="about-footer-cell">
-        <div class="afc-label">Toolkit</div>
-        <div class="afc-value">SQL · Python · Excel · Tableau</div>
-      </div>
-      <div class="about-footer-cell">
-        <div class="afc-label">Available</div>
-        <div class="afc-value">Within 15 days · Pan-India</div>
-      </div>
     </div>
 
     <!-- Closing quote -->

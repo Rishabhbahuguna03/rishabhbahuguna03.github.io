@@ -12,8 +12,31 @@
   <meta property="og:type"        content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
+
+  <style>
+    /* Hero name override — Jost Bold, no italics */
+    .hero-name {
+      font-family: 'Jost', sans-serif;
+      font-weight: 700;
+      font-style: normal;
+      color: #00a1e1;
+    }
+    .hero-name em {
+      font-style: normal;
+      font-family: 'Jost', sans-serif;
+      font-weight: 700;
+      color: #00a1e1;
+    }
+
+    /* Hire me button hover */
+    .nav-cta:hover {
+      background: #00a1e1 !important;
+      border-color: #00a1e1 !important;
+      color: #fff !important;
+    }
+  </style>
 </head>
 <body>
 
@@ -40,38 +63,15 @@
 </div>
 
 <!-- HERO -->
-<div class="hero">
-  <div class="hero-text">
-    <div class="hero-eyebrow fade-up">Product Analyst · APM · Business Analyst · Data Analyst</div>
-    <h1 class="hero-name fade-up delay-1">Rishabh<br><em>Bahuguna</em></h1>
+<div class="hero" style="display:block;">
+  <div class="hero-text" style="max-width:100%; width:100%;">
+    <div class="hero-eyebrow fade-up">Problem solver &nbsp;|&nbsp; Keen observer &nbsp;|&nbsp; Analytics</div>
+    <h1 class="hero-name fade-up delay-1">Rishabh<br>Bahuguna</h1>
     <p class="hero-desc fade-up delay-2">
       I dig into user behaviour data to find the metric story behind product decisions — and translate it into recommendations that product teams can act on.
     </p>
-    <div class="hero-tags fade-up delay-3">
-      <span class="tag">SQL</span>
-      <span class="tag">Python</span>
-      <span class="tag">Tableau</span>
-      <span class="tag">Excel</span>
-      <span class="tag">Product thinking</span>
-      <span class="tag">Funnel analysis</span>
-      <span class="tag">Business analysis</span>
-      <span class="tag">Data analysis</span>
-    </div>
-    <div class="hero-btns fade-up delay-4">
+    <div class="hero-btns fade-up delay-3">
       <a class="btn-primary" href="#projects">View case studies</a>
-      <a class="btn-outline" href="https://www.linkedin.com/in/rishabhbahuguna03" target="_blank" rel="noopener">LinkedIn</a>
-    </div>
-  </div>
-  <div class="hero-visual fade-up delay-2">
-    <div class="hero-card">
-      <div class="hero-card-label">Open to opportunities</div>
-      <div class="hero-card-stat">PA <span>&</span> APM</div>
-      <div class="mini-bar-label"><span>SQL</span><span>Advanced</span></div>
-      <div class="mini-bar"><div class="mini-bar-fill" data-width="78%"></div></div>
-      <div class="mini-bar-label"><span>Product thinking</span><span>Growing</span></div>
-      <div class="mini-bar"><div class="mini-bar-fill" data-width="55%"></div></div>
-      <div class="mini-bar-label"><span>Data visualisation</span><span>Intermediate</span></div>
-      <div class="mini-bar"><div class="mini-bar-fill" data-width="65%"></div></div>
     </div>
   </div>
 </div>
@@ -90,7 +90,7 @@
     <!-- Opening headline -->
     <h3 class="about-headline">
       I don't start with answers.<br>
-      I start with the question <em>behind</em> the metric.
+      I start with the question <strong>behind</strong> the metric.
     </h3>
 
     <!-- About narrative -->
@@ -296,33 +296,26 @@
         <li>SQL (window functions, CTEs)</li>
         <li>Python (pandas, matplotlib)</li>
         <li>Excel (pivot tables, VLOOKUP)</li>
-        <!-- <li>Cohort &amp; retention analysis</li> -->
       </ul>
     </div>
     <div class="skill-group reveal">
       <div class="skill-group-title">Visualisation</div>
       <ul class="skill-list">
         <li>Tableau</li>
-        <!-- <li>Power BI (basic)</li> -->
         <li>Python (seaborn, plotly)</li>
-        <!-- <li>Dashboard design</li> -->
       </ul>
     </div>
     <div class="skill-group reveal">
       <div class="skill-group-title">Product thinking</div>
       <ul class="skill-list">
-        <!-- <li>Funnel analysis</li> -->
         <li>DAU / MAU / retention</li>
         <li>A/B test interpretation</li>
-        <!-- <li>North Star metrics</li> -->
       </ul>
     </div>
     <div class="skill-group reveal">
       <div class="skill-group-title">Frameworks</div>
       <ul class="skill-list">
-        <!-- <li>MECE decomposition</li> -->
         <li>Root-cause analysis</li>
-        <!-- <li>RICE prioritisation</li> -->
         <li>Business case writing</li>
       </ul>
     </div>
